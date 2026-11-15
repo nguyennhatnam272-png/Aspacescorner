@@ -1,44 +1,41 @@
-# A Space’s Corner — source code
+"A Space's Corner" is a research-oriented platform designed to connect Earth science and interplanetary exploration. We offer an organized collection of theoretic locations using geographical characteristics and environmental temperature, subsequently comparing them with extraterrestrial landscapes.By identifying terrestrial environments that resembles unorthodox conditions, we aim to provide valuable insights to aid subsequent Moon and Mars objectives. Our website also covers Earth geology, extreme conditions and astrobiology in order to support researchers, students and space enthusiasts in investigating potential analog sites. Our ambitions reach much further, though. Our team focuses on envisioning a brighter tomorrow for humanity and scientific breakthroughs beyond the cosmos. Earth may be the starting point, but it certainly isn't the ending. 
+MAIN FEATURES: 
+🪐 Interactive celestial bodies 
+📖 Explanatory dictionary 
+🔖 Bilingual support 
 
-Earth analogs for permanent Moon and Mars bases: an interactive site with 3D globes,
-2D maps, place details and a dictionary of sites, in English and Vietnamese.
+BUILT WITH: 
 
-## Folders
+Frontend: HTML 
 
-- `site/` — the website
-  - `index.html` — all the page code: HTML, CSS (in `<style>`) and JavaScript (in the last `<script>`).
-    Place data (Moon, Mars and Earth sites, fun facts, terrain and climate numbers) is near the top of that script.
-    Vietnamese text is in `I18N_VI` (interface), `SITE_VI` (site text by id) and `BODIES_VI`, just above the data.
-  - `earth/`, `moon/`, `mars/` — map images the globes and 2D maps load.
-- `build/` — how the map images were made
-  - `build_earth_textures.py` — Earth colour, height, water and cloud maps
-  - `build_moon_mars_textures.py` — Moon and Mars colour and height maps
-  - `build_earth_dem.py` — true Earth heights (AWS Terrain Tiles) for the hover readout and relief
-  - `fetch_era5_pressure.py`, `build_earth_pressure.py` — ERA5 1991–2020 annual-mean surface pressure
-  - `fetch_era5_temperature.py`, `build_earth_temperature.py` — ERA5 1991–2020 monthly 2 m air temperature (Average temperature view)
-  - `make_single_file.py` — packs `site/` into one self-contained HTML file
-  - `source/` — the raw data (NOAA ETOPO1, NASA Blue Marble, LOLA, MOLA, USGS Viking)
-  - `README.md` — data sources, licences and limits
+Backend: Python, HTML 
 
-## Run the site
+Runs on: Vercel, GITHUB 
 
-Serve the `site/` folder with any web server (opening index.html directly blocks the map images):
+INSTALLATION: 
 
-    cd site
-    python3 -m http.server 8000
+1: Clone the repository 
 
-Then open http://localhost:8000.
+Git clone [https://github.com/nguyennhatnam272-png/Aspacescorner]( https://github.com/nguyennhatnam272-png/Aspacescorner) 
 
-## Rebuild the map images
+2: Navigate to the project folder: 
 
-Needs Python 3 with numpy, Pillow, netCDF4 and scipy:
+cd Aspacescorner 
 
-    cd build
-    python3 build_earth_textures.py
-    python3 build_moon_mars_textures.py
+3: Open the website 
 
-They write into `build/earth`, `build/moon`, `build/mars`; copy those folders into `site/`.
+Double click the index.html to open it in your default browser OR 
 
-## Make the single shareable file
+Use the “Live server” extension in VSC for better development 
 
-    python3 build/make_single_file.py
+Author: 
+
+Team name: Math Matrix 
+
+Dsc: Nambrussman 
+
+Github: nguyennhatnam272 
+
+License: 
+
+This project is using Apache License 2.0 License 
